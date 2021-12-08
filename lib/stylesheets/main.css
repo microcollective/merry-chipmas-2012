@@ -1,0 +1,314 @@
+@import url(http://fonts.googleapis.com/css?family=Milonga|Gilda+Display|Sacramento);
+@font-face {
+    font-family: "Chipmas";
+    src: url(../fonts/Chipmas.ttf);
+}
+
+body {
+	background: #B5E7EE url('../img/diag_1px.png');
+	font-family: 'Gilda Display', serif;
+	margin: 0;
+}
+
+a {
+	color: #90b750;
+	position: relative;
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-ms-transition: all 300ms;
+	-o-transition: all 300ms;
+	transition: all 300ms;
+}
+
+a:hover {
+	bottom: 2px;
+}
+
+a:visited {
+	color: #7f9539;
+}
+
+h1 {
+	font-family: 'Milonga', cursive;
+	font-size: 3em;
+	font-weight: 200;
+	margin-bottom: 0;
+	text-align: left;
+	
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-ms-transition: all 300ms;
+	-o-transition: all 300ms;
+	transition: all 300ms;
+}
+
+h2, h3, h4, h5 {
+	font-family: 'Sacramento', serif, cursive;
+	font-size: 1.6em;
+	font-weight: 300;
+	margin: 0 0 20px 0;
+	text-align: left;
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-ms-transition: all 300ms;
+	-o-transition: all 300ms;
+	transition: all 300ms;
+}
+
+h3, h4 {
+	text-align: center;
+}
+
+h3 a, h3 a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+h3 a:hover {
+	color: #F60;
+}
+
+h4 {
+	cursor: default;
+}
+
+h5 {
+	margin: 40px 0 0 0;
+}
+
+.play {
+	background: url(../img/play.gif) no-repeat center center;
+}
+
+.stop {
+	background: url(../img/stop.gif) no-repeat center center;
+}
+
+#footer {
+	margin: 50% 0 25% 0;
+	width: 100%;
+}
+
+#download {
+	color: #F60;
+}
+
+#page {
+	background: rgba(255,255,255,0.47);
+	margin: 0 auto;
+	padding: 10px 20px;
+	position: relative;
+	width: 680px;
+	z-index: 1;
+	
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-ms-transition: all 300ms;
+	-o-transition: all 300ms;
+	transition: all 300ms;
+}
+
+#page p {
+	font-family: 'Gilda Display', serif;
+	font-size: 16px;
+	line-height: 1em;
+}
+
+#header {
+	position: relative;
+	width: 100%;
+}
+
+#footer-padder {
+	height: 68px;
+	width: 100%;
+	
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-ms-transition: all 300ms;
+	-o-transition: all 300ms;
+	transition: all 300ms;
+}
+
+#footer-bar {
+	background: left center repeat-x url('../img/floor.gif');
+	bottom: 0;
+	height: 68px;
+	left: 0;
+	opacity: 1;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-ms-transition: all 300ms;
+	-o-transition: all 300ms;
+	transition: all 300ms;
+}
+
+.media-sprite {
+	opacity: 1;
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-ms-transition: all 300ms;
+	-o-transition: all 300ms;
+	transition: all 300ms;
+}
+
+#footer-bar-igloo {
+	background: url('../img/igloo.gif') no-repeat;
+	bottom: 64px;
+	height: 48px;
+	left: 16%;
+	position: absolute;
+	width: 96px;
+}
+
+#footer-bar-tree-two {
+	background: url('../img/tree2.gif') no-repeat;
+	bottom: 48px;
+	height: 276px;
+	left: 2%;
+	position: absolute;
+	width: 240px;
+}
+
+#footer-bar-tree {
+	background: url('../img/tree.gif') no-repeat;
+	bottom: 60px;
+	height: 347px;
+	right: 8%;
+	position: absolute;
+	width: 160px;
+}
+
+#footer-bar-snowman {
+	background: url('../img/snowman.gif') no-repeat;
+	bottom: 64px;
+	height: 56px;
+	right: 20%;
+	position: absolute;
+	width: 52px;
+}
+
+#footer-bar-sign {
+	background: url('../img/sign.gif') no-repeat;
+	bottom: 64px;
+	color: #ced6e3;
+	font-size: 28px;
+	height: 80px;
+	line-height: 0.5em;
+	opacity: 1;
+	padding: 20px;
+	position: absolute;
+	right: 0.2%;
+	text-align: center;
+	width: 80px;
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-ms-transition: all 300ms;
+	-o-transition: all 300ms;
+	transition: all 300ms;
+}
+
+#footer-bar-sign-snow {
+	background: url('../img/sign-snow.gif') no-repeat;
+	height: 120px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 120px;
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-ms-transition: all 300ms;
+	-o-transition: all 300ms;
+	transition: all 300ms;
+}
+
+#header-sign {
+	background: url('../img/sign.gif') no-repeat;
+	color: #CED6E3;
+	font-size: 28px;
+	height: 80px;
+	line-height: 0.5em;
+	opacity: 0;
+	padding: 20px;
+	position: absolute;
+	right: 0.4%;
+	text-align: center;
+	top: -20px;
+	width: 80px;
+	
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	-ms-transition: all 300ms;
+	-o-transition: all 300ms;
+	transition: all 300ms;
+}
+
+.time {
+	-webkit-font-smoothing: none !important;
+	-moz-font-smoothing: none !important;
+
+	font-family: 'Chipmas';
+	padding: 0 0 0 8px;
+}
+
+#control {
+	position: relative;
+	width: 52px;
+}
+
+@media all and (max-width: 860px) {
+  .media-sprite {
+	  opacity: 0;
+  }
+}
+
+@media all and (max-width: 1340px) {
+  #page {
+	  width: 600px;
+  }
+}
+
+@media all and (max-width: 1180px) {
+  #page {
+	  width: 500px;
+  }
+}
+
+@media all and (max-width: 1010px) {
+  h1 {
+	  font-size: 1.9em;
+  }
+  
+  #page {
+	  width: 400px;
+  }
+}
+
+@media all and (max-width: 650px) {
+  #page {
+	  width: 90%;
+  }
+  
+  #footer-padder {
+	height: 0;
+	width: 0;
+}
+  
+  #footer-bar, #footer-bar-sign {
+	  opacity: 0;
+  }
+  
+  #header-sign {
+	  opacity: 1;
+  }
+}
+
+@media all and (max-width: 512px) {
+  #header-sign {
+	  opacity: 0;
+  }
+}
