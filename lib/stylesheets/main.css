@@ -89,7 +89,7 @@ h5 {
 	width: 100%;
 }
 
-#download {
+.download-link {
 	color: #F60;
 }
 
@@ -258,6 +258,10 @@ h5 {
 #control {
 	position: relative;
 	width: 52px;
+}
+
+.playmusic {
+	cursor: pointer;
 }
 
 @media all and (max-width: 860px) {

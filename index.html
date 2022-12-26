@@ -1,0 +1,106 @@
+<?php
+    $tracklist = scandir("./lib/music/");
+    
+    function GetExtension($filename){
+			$extension = substr($filename, strrpos($filename,'.'));
+			return $extension;
+		}
+?>
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html;" charset="UTF-8" />
+	<title>Merry Chipmas 2012</title>
+	<link rel="icon" type="image/x-icon" href="./favicon.png">
+	<link href="./lib/stylesheets/main.css" rel="stylesheet" type="text/css" />
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="./lib/js/player/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="./lib/js/snowstorm.js"></script>
+</head>
+
+<body>
+	<div id="player"></div>
+	<div id="page">
+		<div id="header">
+			<h1>Merry Chipmas 2012</h1>
+			<h2>a collection of holiday inspired chiptune music</h2>
+			<div id="header-sign">
+				<br>
+				<div class="time">0:00</div>
+			</div>
+		</div>
+		<h5><a href="./mc2012.zip" class="download-link" target="_blank">Download original zip</a>, <a
+				href="//ucollective.bandcamp.com/album/merry-chipmas-2012" class="download-link" target="_blank">Bandcamp</a> or
+			listen here<i>!</i>
+		</h5>
+		<p>
+			If you missed the re-upload of the archive to include Glenntai's track which 2xAA accidentally missed out (sorry
+			Glenn), download that <a href="./lib/music/26%20Cartridge%20of%20the%20Bleeps%20-%20Glenntai.mp3" target="_blank"
+				id="download">here</a><i>!</i></p>
+		<table>
+		</table>
+		<div id="footer">
+			<h3><a href="http://ucollective.org/" target="_blank">-&micro;Collective.org-</a></h3>
+			<h4>Artwork by Mush</h4>
+		</div>
+	</div>
+	<div id="footer-padder"></div>
+	<div id="footer-bar">
+		<div id="footer-bar-tree-two" class="media-sprite"></div>
+		<div id="footer-bar-igloo" class="media-sprite"></div>
+		<div id="footer-bar-tree" class="media-sprite"></div>
+		<div id="footer-bar-snowman" class="media-sprite"></div>
+		<div id="footer-bar-sign">
+			<div id="footer-bar-sign-snow"></div>
+			<div id="player">
+				<br>
+				<div class="time"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<template id="trackRow">
+	<tr>
+		<td width="52" class="now-playing-display"></td>
+		<td>
+			<p>
+				<a class="playmusic"></a>
+			</p>
+		</td>
+	</tr>
+</template>
+
+<script>
+	((async () => {
+		const response = await fetch('./lib/tracklist.json');
+		const tracklist = await response.json();
+
+		const table = document.querySelector('table');
+
+		for (let i = 0; i < tracklist.length; i += 1) {
+			const row = document.importNode(document.querySelector('#trackRow').content, true)
+			const nowPlayingDisplay = row.querySelector('.now-playing-display');
+			const trackLink = row.querySelector('a');
+			trackLink.addEventListener('click', e => e.preventDefault());
+			trackLink.title = tracklist[i].trackName;
+			trackLink.textContent = tracklist[i].trackName;
+			trackLink.id = `track-${i}`;
+
+			if (i < 1) {
+				nowPlayingDisplay.classList.add('play');
+			}
+
+			table.appendChild(row);
+		}
+
+		initPage(tracklist);
+	})())
+</script>
+
+<script type="text/javascript" src="./lib/js/async.js"></script>
+
+</html>
